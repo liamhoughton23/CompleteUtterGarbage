@@ -5,3 +5,26 @@
 
 <h2>CustomerHome</h2>
 
+@using (Html.BeginForm())
+{
+
+    <h2>CustomerHome</h2>
+    <div class="jumbotron">
+        <h1>Welcome to Getter Garbage Gang</h1>
+        <p class="lead">This is where you can change your pick up day, see how much money you owe, and set your vacation time</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Change Pick Up Day</h2>
+            <p>
+                You can also change your address and zip in case you move. Feel free to leave the vacation days empty if you don't do that kind of stuff.
+            </p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.PrimaryId })
+        </div>
+        <div class="col-md-6">
+            <h2>Debt Tracker</h2>
+            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        </div>
+    </div>
+}

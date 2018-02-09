@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using CompleteUtterGarbage.Models;
+using Microsoft.AspNet.Identity;
 
 namespace CompleteUtterGarbage.Controllers
 {
@@ -52,6 +53,7 @@ namespace CompleteUtterGarbage.Controllers
         {
             if (ModelState.IsValid)
             {
+                employee.UserId = User.Identity.GetUserId();
                 db.Employees.Add(employee);
                 db.SaveChanges();
                 return RedirectToAction("Index");

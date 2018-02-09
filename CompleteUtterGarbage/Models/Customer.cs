@@ -31,7 +31,7 @@ namespace CompleteUtterGarbage.Models
         [Display(Name = "Zip Code")]
         public string ZipCode { get; set; }
 
-        [Display(Name = "Vacation Dates")]
+        [Display(Name = "Vacation StartDate")]
         public string VacationDates { get; set; }
 
         [Required]
