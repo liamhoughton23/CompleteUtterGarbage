@@ -27,7 +27,10 @@
             @Html.DisplayNameFor(model => model.ZipCode)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.VacationDates)
+            @Html.DisplayNameFor(model => model.VacationStartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VacationEndDate)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.PickUpDay)
@@ -52,9 +55,12 @@
         <td>
             @Html.DisplayFor(modelItem => item.ZipCode)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VacationDates)
-        </td>
+        <th>
+            @Html.DisplayFor(modelItem => item.VacationStartDate)
+        </th>
+        <th>
+            @Html.DisplayFor(modelItem => item.VacationEndDate)
+        </th>
         <td>
             @Html.DisplayFor(modelItem => item.PickUpDay)
         </td>

@@ -32,7 +32,10 @@ namespace CompleteUtterGarbage.Models
         public string ZipCode { get; set; }
 
         [Display(Name = "Vacation StartDate")]
-        public string VacationDates { get; set; }
+        public string VacationStartDate { get; set; }
+
+        [Display(Name = "Vacation EndDate")]
+        public string VacationEndDate { get; set; }
 
         [Required]
         [Display(Name = "Pick Up Day")]

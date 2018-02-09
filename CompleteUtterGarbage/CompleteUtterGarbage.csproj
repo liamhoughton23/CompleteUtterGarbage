@@ -208,6 +208,10 @@
     <Compile Include="Migrations\201802092007207_roles are close to ready.Designer.cs">
       <DependentUpon>201802092007207_roles are close to ready.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802092110576_added end vacation.cs" />
+    <Compile Include="Migrations\201802092110576_added end vacation.Designer.cs">
+      <DependentUpon>201802092110576_added end vacation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Bill.cs" />
@@ -311,6 +315,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201802092007207_roles are close to ready.resx">
       <DependentUpon>201802092007207_roles are close to ready.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802092110576_added end vacation.resx">
+      <DependentUpon>201802092110576_added end vacation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

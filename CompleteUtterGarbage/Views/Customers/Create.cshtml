@@ -47,9 +47,15 @@
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(m => m.VacationDates, new { @class = "col-md-2 control-label" })
+            @Html.LabelFor(m => m.VacationStartDate, new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
-                @Html.TextBoxFor(m => m.VacationDates, new { @class = "form-control" })
+                @Html.TextBoxFor(m => m.VacationStartDate, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.VacationEndDate, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.VacationEndDate, new { @class = "form-control" })
             </div>
         </div>
         <div class="form-group">
