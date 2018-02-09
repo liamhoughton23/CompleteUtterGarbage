@@ -29,5 +29,11 @@ namespace CompleteUtterGarbage.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<CompleteUtterGarbage.Models.Employee> Employees { get; set; }
+
+        //public System.Data.Entity.DbSet<CompleteUtterGarbage.Models.ApplicationUser> ApplicationUsers { get; set; }
+
+        public System.Data.Entity.DbSet<CompleteUtterGarbage.Models.Customer> Customers { get; set; }
     }
 }
