@@ -17,6 +17,7 @@ namespace CompleteUtterGarbage.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ApplicationRoleManager _roleManager;
 
         public AccountController()
         {
@@ -26,6 +27,19 @@ namespace CompleteUtterGarbage.Controllers
         {
             UserManager = userManager;
             SignInManager = signInManager;
+            RoleManager = RoleManager;
+        }
+
+       public ApplicationRoleManager RoleManager
+       {
+            get
+            {
+                return _roleManager ?? HttpContext.GetOwinContext().Get<ApplicationRoleManager>();
+            }
+            private set
+            {
+                _roleManager = value;
+            }
         }
 
         public ApplicationSignInManager SignInManager
@@ -155,6 +169,7 @@ namespace CompleteUtterGarbage.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    result = await UserManager.AddToRoleAsync(user.Id, model.RoleName);
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771

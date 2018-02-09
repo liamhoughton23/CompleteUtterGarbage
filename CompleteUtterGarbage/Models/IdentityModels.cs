@@ -29,11 +29,18 @@ namespace CompleteUtterGarbage.Models
         {
             return new ApplicationDbContext();
         }
+        public class ApplicationRole : IdentityRole
+        {
+            public ApplicationRole() : base() { }
+            public ApplicationRole(string roleName) : base(roleName) { }
+        }
 
         public System.Data.Entity.DbSet<CompleteUtterGarbage.Models.Employee> Employees { get; set; }
 
         //public System.Data.Entity.DbSet<CompleteUtterGarbage.Models.ApplicationUser> ApplicationUsers { get; set; }
 
         public System.Data.Entity.DbSet<CompleteUtterGarbage.Models.Customer> Customers { get; set; }
+
+        public System.Data.Entity.DbSet<CompleteUtterGarbage.Models.RoleViewModel> RoleViewModels { get; set; }
     }
 }
